@@ -37,7 +37,7 @@ fn parse_cli_args() -> clap::ArgMatches<'static>
                 .long("--output")
                 .default_value("stdout")
                 .takes_value(true)
-                .help("The file path to write the output to (default: stdout)"))
+                .help("The file path to write the output to"))
         .arg(
             Arg::with_name("output-format")
             .long("--output-format")

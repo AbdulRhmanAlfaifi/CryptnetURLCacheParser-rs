@@ -23,7 +23,7 @@ FLAGS:
 OPTIONS:
     -p, --path <PATH>...                   Path(s) to CryptnetURLCache Metadata Files to be Parsed - accepts glob
                                            (Defaults to all windows paths)
-    -o, --output <output>                  The file path to write the output to (default: stdout) [default: stdout]
+    -o, --output <output>                  The file path to write the output to [default: stdout]
         --output-format <output-format>    Output format. [default: csv]  [possible values: csv, jsonl]
 ```
 
