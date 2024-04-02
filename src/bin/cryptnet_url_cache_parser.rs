@@ -128,7 +128,13 @@ fn main() {
             match entry {
                 Ok(path) => {
                     let fullpath = path.as_path().to_str().unwrap();
-                    let parsed = CryptnetURLCacheParser::parse_file(fullpath, use_content).unwrap();
+                    let parsed = match CryptnetURLCacheParser::parse_file(fullpath, use_content) {
+                        Ok(parsed) => parsed,
+                        Err(e) => {
+                            eprintln!("Error parsing the file '{}', ERROR: {:?}", fullpath, e);
+                            continue;
+                        }
+                    };
                     match output_format {
                         OutputFormat::JSONL => {
                             let json_data = serde_json::to_string(&parsed).unwrap();
