@@ -10,7 +10,7 @@ jobs:
         platform:
           - release_for: linux_x86_64
             os: ubuntu-latest
-            target: x86_64-unknown-linux-musl
+            target: x86_64-unknown-linux-gnu
             bin: cryptnet_url_cache_parser
             name: cryptnet_url_cache_parser_linux_x86_64
             command: build
